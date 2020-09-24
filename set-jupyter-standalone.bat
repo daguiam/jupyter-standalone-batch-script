@@ -8,11 +8,6 @@ SET parent=%~dp0
 echo Setting up Jupyter to start in standalone Chrome or Firefox window
 
 
-if [%1] == []  (
-    echo Run: %0 ^<chrome ^| firefox^>
-    GOTO END 
-    
-    )
 
 
 set CHROME86=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
@@ -28,7 +23,16 @@ echo %CHROME64%
 
 set BROWSER_PATH="aaa"
 
+
+if [%1] == []  (
+    echo Run: %0 ^<chrome ^| firefox^>
+    goto CHROME
+    GOTO END 
+    
+    )
+
 if %1==chrome (
+:CHROME
     rem Verify path to chrome install
     if exist  "%CHROME86%" ( 
         set BROWSER_PATH="%CHROME86%"
