@@ -1,0 +1,1 @@
+"%userprofile%\Anaconda3\pythonw.exe" "%userprofile%\Anaconda3\cwp.py" "%userprofile%\Anaconda3" "%userprofile%\Anaconda3\pythonw.exe" -m nbopen "%1"
